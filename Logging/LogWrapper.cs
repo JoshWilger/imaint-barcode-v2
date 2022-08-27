@@ -26,8 +26,8 @@ namespace Logging
 
         public void LogInfo(string message) => _logger.Info(message);
 
-        public void LogTrace(string message) => _logger.Trace(message);
-
         public void LogWarn(string message) => _logger.Warn(message);
+
+        public void LogTrace(string message) => _logger.Trace(message);
     }
 }

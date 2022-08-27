@@ -1,5 +1,5 @@
 ﻿using imaint_barcode_v2.DataContracts;
-//using Logging;
+using Logging;
 using System;
 using System.Windows.Forms;
 
@@ -7,7 +7,7 @@ namespace imaint_barcode_v2
 {
     public partial class SetSite : Form
     {
-        //private readonly ILogWrapper _logger = new LogWrapper();
+        private readonly ILogWrapper _logger = new LogWrapper();
 
         public SetSite()
         {
@@ -45,7 +45,7 @@ namespace imaint_barcode_v2
             }
             catch (Exception ex)
             {
-                //_logger.LogError(ex.Message);
+                _logger.LogError(ex.Message);
                 MessageBox.Show(ex.Message);
             }
         }

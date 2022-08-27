@@ -2,7 +2,7 @@
 using DymoSDK.Implementations;
 using DymoSDK.Interfaces;
 using imaint_barcode_v2.DataContracts;
-//using Logging;
+using Logging;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -13,7 +13,7 @@ namespace imaint_barcode_v2
     {
         private readonly IDymoLabel dymoSDKLabel;
 
-        //private readonly ILogWrapper _logger = new LogWrapper();
+        private readonly ILogWrapper _logger = new LogWrapper();
 
         public BarcodePrinting()
         {
@@ -26,7 +26,7 @@ namespace imaint_barcode_v2
             }
             catch (Exception ex)
             {
-                //_logger.LogError(ex.Message);
+                _logger.LogError(ex.Message);
                 MessageBox.Show(ex.Message);
                 Application.Exit();
             }
@@ -110,7 +110,7 @@ namespace imaint_barcode_v2
             }
             catch (Exception ex)
             {
-                //_logger.LogError(ex.Message);
+                _logger.LogError(ex.Message);
                 MessageBox.Show(ex.Message);
             }
         }
@@ -191,7 +191,7 @@ namespace imaint_barcode_v2
             }
             catch (Exception ex)
             {
-                //_logger.LogError(ex.Message);
+                _logger.LogError(ex.Message);
                 MessageBox.Show(ex.Message);
             }
         }
